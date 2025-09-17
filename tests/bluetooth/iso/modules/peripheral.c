@@ -149,9 +149,9 @@ static int peripheral_init(void)
 	}
 
 	/* Set the advertising data */
-	err = bt_le_ext_adv_set_data(adv_ext, adv_data, ARRAY_SIZE(adv_data), NULL, 0);
-	if (err) {
-		LOG_ERR("Failed to set advertising data. Err: %d", err);
+	ret = bt_le_ext_adv_set_data(adv_ext, adv_data, ARRAY_SIZE(adv_data), NULL, 0);
+	if (ret) {
+		LOG_ERR("Failed to set advertising data. Err: %d", ret);
 		return;
 	}
 
