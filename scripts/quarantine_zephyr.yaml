@@ -213,6 +213,12 @@
     - testing.ctest.base
   comment: "https://nordicsemi.atlassian.net/browse/NCSDK-35402"
 
+- scenarios:
+    - net.http.server.tls.toolchain
+  platforms:
+    - native_sim/native
+  comment: "https://nordicsemi.atlassian.net/browse/NCSDK-35519"
+
 # ---------------------------------   Won't fix section -----------------------------------
 
 - scenarios:
