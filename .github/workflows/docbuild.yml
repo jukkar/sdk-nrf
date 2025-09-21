@@ -53,6 +53,12 @@ jobs:
           tar xf doxygen-${DOXYGEN_VERSION}.linux.bin.tar.gz
           echo "${PWD}/doxygen-${DOXYGEN_VERSION}/bin" >> $GITHUB_PATH
 
+      - name: Setup Zephyr project
+        uses: zephyrproject-rtos/action-zephyr-setup@6a744370a22e4ecb24f5dda3c7e80ff3e0a3b847 # v1.0.8
+        with:
+          app-path: ncs/nrf
+          toolchains: 'all'
+
       - name: Install Python dependencies
         working-directory: ncs
         run: |
